@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f7f4ec">
+<title>春风 · 推演台</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="vignette" aria-hidden="true"></div>
+<div class="sky" aria-hidden="true"></div>
+<svg class="scene scene--far" viewBox="0 0 640 320" aria-hidden="true" focusable="false">
+  <g fill="#93a88f">
+    <ellipse cx="120" cy="212" rx="128" ry="74"/>
+    <ellipse cx="304" cy="188" rx="146" ry="84"/>
+    <ellipse cx="486" cy="216" rx="134" ry="72"/>
+  </g>
+  <g fill="#c2b2ae" opacity="0.8">
+    <ellipse cx="212" cy="158" rx="72" ry="46"/>
+    <ellipse cx="424" cy="148" rx="60" ry="40"/>
+  </g>
+  <g fill="#8fa78e" opacity="0.6">
+    <ellipse cx="352" cy="240" rx="110" ry="58"/>
+  </g>
+</svg>
+
+<svg class="scene scene--hills" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <g fill="#c3d0c0" opacity="0.5">
+    <path d="M0 150C160 120 300 92 460 104 620 116 760 146 920 136 1080 126 1240 98 1440 110L1440 200 0 200Z"/>
+  </g>
+  <g fill="#d3ddcf" opacity="0.4">
+    <path d="M0 172C180 150 340 132 520 142 700 152 860 174 1040 166 1200 158 1320 140 1440 146L1440 200 0 200Z"/>
+  </g>
+</svg>
+
+<svg class="scene scene--willow" viewBox="0 0 260 420" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="willowG" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#6f9866"/>
+      <stop offset="0.6" stop-color="#8fb57d"/>
+      <stop offset="1" stop-color="#b8cfa3" stop-opacity="0.2"/>
+    </linearGradient>
+    <path id="willowLeaf" d="M0 0C2.6 4.6 4.6 11 4 18.6 2.6 12 1.4 6 0 0Z"/>
+    <g id="willowCluster">
+      <use href="#willowLeaf" transform="rotate(-34)"/>
+      <use href="#willowLeaf" transform="rotate(-12) scale(0.92)"/>
+      <use href="#willowLeaf" transform="rotate(14) scale(0.88)"/>
+      <use href="#willowLeaf" transform="rotate(38) scale(0.8)"/>
+    </g>
+  </defs>
+  <ellipse class="willow-wash" cx="62" cy="190" rx="54" ry="120"/>
+  <path class="willow-stem" d="M-10 -8C34 12 56 44 62 86" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="willow-stem-fine" d="M-10 -8C34 12 56 44 62 86" fill="none" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="8 14"/>
+  <g class="willow-branch willow-branch--a">
+    <path class="willow-line" d="M60 82C74 140 78 220 64 330 58 372 52 400 46 418" fill="none" stroke-width="1.5" stroke-linecap="round"/>
+    <use class="leaf leaf--dark" href="#willowCluster" transform="translate(66 150) rotate(8)"/>
+    <use class="leaf leaf--mid" href="#willowCluster" transform="translate(72 200) rotate(4) scale(0.9)"/>
+    <use class="leaf leaf--light" href="#willowCluster" transform="translate(72 252) rotate(-6)"/>
+    <use class="leaf leaf--mid" href="#willowCluster" transform="translate(66 300) rotate(10) scale(0.92)"/>
+    <use class="leaf leaf--dark leaf--far" href="#willowCluster" transform="translate(58 350) rotate(-8) scale(0.85)"/>
+    <use class="leaf leaf--mid leaf--far" href="#willowCluster" transform="translate(52 392) rotate(6) scale(0.72)"/>
+  </g>
+  <g class="willow-branch willow-branch--b">
+    <path class="willow-line" d="M50 60C30 120 20 190 26 270 28 310 32 348 34 380" fill="none" stroke-width="1.3" stroke-linecap="round"/>
+    <use class="leaf leaf--light" href="#willowCluster" transform="translate(34 130) rotate(-18)"/>
+    <use class="leaf leaf--mid" href="#willowCluster" transform="translate(26 180) rotate(-10) scale(0.92)"/>
+    <use class="leaf leaf--dark" href="#willowCluster" transform="translate(24 230) rotate(-4)"/>
+    <use class="leaf leaf--light" href="#willowCluster" transform="translate(26 278) rotate(8) scale(0.9)"/>
+    <use class="leaf leaf--mid leaf--far" href="#willowCluster" transform="translate(30 322) rotate(-6) scale(0.82)"/>
+    <use class="leaf leaf--dark leaf--far" href="#willowCluster" transform="translate(32 362) rotate(4) scale(0.7)"/>
+  </g>
+  <g class="willow-branch willow-branch--c">
+    <path class="willow-line" d="M62 100C88 160 100 230 96 310 94 350 90 380 86 404" fill="none" stroke-width="1.2" stroke-linecap="round"/>
+    <use class="leaf leaf--mid" href="#willowCluster" transform="translate(78 160) rotate(14) scale(0.92)"/>
+    <use class="leaf leaf--light" href="#willowCluster" transform="translate(88 205) rotate(8)"/>
+    <use class="leaf leaf--dark" href="#willowCluster" transform="translate(96 250) rotate(2) scale(0.9)"/>
+    <use class="leaf leaf--mid" href="#willowCluster" transform="translate(98 296) rotate(-6) scale(0.84)"/>
+    <use class="leaf leaf--light leaf--far" href="#willowCluster" transform="translate(94 340) rotate(6) scale(0.76)"/>
+    <use class="leaf leaf--mid leaf--far" href="#willowCluster" transform="translate(90 378) rotate(-4) scale(0.66)"/>
+  </g>
+</svg>
+
+<svg class="scene scene--blossom" viewBox="0 0 360 340" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="petalG" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#fdfaf5"/>
+      <stop offset="0.45" stop-color="#eed6db"/>
+      <stop offset="1" stop-color="#d0adb8"/>
+    </linearGradient>
+    <linearGradient id="petalG2" x1="0.1" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset="0.5" stop-color="#efdde1"/>
+      <stop offset="1" stop-color="#c9a8b3"/>
+    </linearGradient>
+    <linearGradient id="branchG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6f6559"/>
+      <stop offset="0.6" stop-color="#554e45"/>
+      <stop offset="1" stop-color="#3f3a34"/>
+    </linearGradient>
+    <path id="petalA" d="M0 0C-5.2-3.4-8.4-8-8.2-12.4-8-16-5.2-18.2-2.4-17.4-1.2-17-.6-15.6-.5-14.2-.4-15.9.4-17.4 1.8-17.6 4.7-18 7.2-15.8 7.1-12.2 7-7.8 3.9-3.2 0 0Z" fill="url(#petalG)"/>
+    <path id="petalB" d="M0 0C-3.9-4.2-5.8-9-5.2-13.2-4.7-16.6-2.4-18-.6-16.8.2-18.6 2.6-17.6 3.4-14.4 4.4-10.4 2.9-4.6 0 0Z" fill="url(#petalG2)"/>
+    <g id="sakura">
+      <g fill="#8fa084" opacity="0.75">
+        <path d="M-1-6C-4-5-6-3-6.6 0-4 0-1-2 0-4Z"/>
+        <path d="M-1-6C-4-5-6-3-6.6 0-4 0-1-2 0-4Z" transform="rotate(72)"/>
+        <path d="M-1-6C-4-5-6-3-6.6 0-4 0-1-2 0-4Z" transform="rotate(144)"/>
+        <path d="M-1-6C-4-5-6-3-6.6 0-4 0-1-2 0-4Z" transform="rotate(216)"/>
+        <path d="M-1-6C-4-5-6-3-6.6 0-4 0-1-2 0-4Z" transform="rotate(288)"/>
+      </g>
+      <use href="#petalA"/>
+      <use href="#petalB" transform="rotate(72)"/>
+      <use href="#petalA" transform="rotate(144) scale(0.96)"/>
+      <use href="#petalB" transform="rotate(216)"/>
+      <use href="#petalA" transform="rotate(288) scale(0.93)"/>
+      <g fill="#d8bd8e">
+        <circle cx="0" cy="-3.6" r="1"/>
+        <circle cx="2.4" cy="-2.4" r="0.9"/>
+        <circle cx="3.5" cy="0" r="0.95"/>
+        <circle cx="2.4" cy="2.6" r="0.9"/>
+        <circle cx="-2.4" cy="2.6" r="0.9"/>
+        <circle cx="-3.5" cy="0" r="0.95"/>
+        <circle cx="-2.4" cy="-2.4" r="0.9"/>
+        <circle cx="0" cy="3.4" r="0.9"/>
+        <circle cx="1.6" cy="1.8" r="0.8"/>
+        <circle cx="-1.6" cy="1.8" r="0.8"/>
+        <circle cx="1.8" cy="-1.6" r="0.8"/>
+        <circle cx="-1.8" cy="-1.6" r="0.8"/>
+      </g>
+      <circle r="2.4" fill="#c3a06a"/>
+    </g>
+    <g id="cluster">
+      <use href="#sakura"/>
+      <g transform="translate(15.5 12) rotate(22) scale(0.62)"><use href="#sakura"/></g>
+      <g transform="translate(-16.5 13) rotate(-30) scale(0.5)"><use href="#sakura"/></g>
+    </g>
+    <g id="bud">
+      <path d="M0 3.5C-4.6-1.8-4.6-8.6 0-12.4 4.6-8.6 4.6-1.8 0 3.5Z" fill="#d6a3b0"/>
+      <path d="M0 2.6C-2 5-3.2 7.6-4 10.4" fill="none" stroke="#7d6448" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="0" cy="-9.4" r="1" fill="#e8c9a0" opacity="0.8"/>
+    </g>
+    <g id="sakuraHalf">
+      <use href="#petalB"/>
+      <use href="#petalB" transform="rotate(120) scale(0.95)"/>
+      <use href="#petalA" transform="rotate(240) scale(0.9)"/>
+      <circle r="1.4" fill="#e6c9a0"/>
+    </g>
+    <path id="leaf" d="M0 0C6-4.4 13.4-4.6 20-1.2 13.8 4.4 5.2 4.6 0 0Z" fill="#8b9d80"/>
+    <path id="leafVein" d="M1 0C6-1.2 12-1.8 18-1.2" fill="none" stroke="#bfcdb4" stroke-width="0.7" opacity="0.6"/>
+  </defs>
+
+  <g class="blossom-wash">
+    <ellipse cx="286" cy="78" rx="88" ry="64" fill="#f3dfe2" opacity="0.35"/>
+    <ellipse cx="214" cy="112" rx="62" ry="48" fill="#e9d2d7" opacity="0.25"/>
+    <ellipse cx="186" cy="196" rx="48" ry="40" fill="#dcc8ce" opacity="0.2"/>
+  </g>
+
+  <ellipse cx="248" cy="156" rx="88" ry="32" fill="#6d5a3e" opacity="0.08" transform="rotate(-28 248 156)"/>
+
+  <g class="branch">
+    <path d="M372-10C364-2 358 6 352 14" fill="none" stroke="url(#branchG)" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M356 10C312 24 276 52 250 88 226 122 212 166 198 210 192 228 188 246 186 264" fill="none" stroke="url(#branchG)" stroke-width="3.8" stroke-linecap="round"/>
+    <path d="M370-8C362 0 356 8 350 16" fill="none" stroke="#6f6559" stroke-width="1" stroke-linecap="round" stroke-dasharray="7 12" opacity="0.2"/>
+    <path d="M354 12C312 26 278 52 252 86" fill="none" stroke="#6f6559" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="14 20" opacity="0.18"/>
+    <path d="M286 44C262 39 238 44 218 57" fill="none" stroke="url(#branchG)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M250 88C232 96 218 110 207 129" fill="none" stroke="url(#branchG)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M214 168C197 171 183 181 173 195" fill="none" stroke="url(#branchG)" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M184 262C176 278 167 292 157 306" fill="none" stroke="url(#branchG)" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M352 14C306 30 272 56 246 92" fill="none" stroke="#a49a8a" stroke-width="0.8" stroke-linecap="round" opacity="0.34"/>
+    <path d="M284 46C262 41 240 46 220 58" fill="none" stroke="#a49a8a" stroke-width="0.7" stroke-linecap="round" opacity="0.28"/>
+    <g stroke="#3f3a33" stroke-width="0.9" stroke-linecap="round" opacity="0.18">
+      <path d="M300 33C302 38 305 41 309 44"/>
+      <path d="M280 48C282 53 285 56 289 58"/>
+      <path d="M262 66C263 71 266 75 270 77"/>
+      <path d="M244 92C245 97 248 101 252 103"/>
+      <path d="M232 112C233 117 236 121 239 123"/>
+      <path d="M220 140C221 145 224 149 227 151"/>
+      <path d="M210 172C211 177 214 181 217 183"/>
+      <path d="M200 210C201 215 203 219 206 221"/>
+      <path d="M192 240C193 245 195 249 198 251"/>
+      <path d="M186 266C187 271 179 279 172 283"/>
+      <path d="M318 27C324 33 328 40 330 46"/>
+      <path d="M296 39C300 45 302 51 303 56"/>
+      <path d="M232 84C228 90 225 96 223 102"/>
+      <path d="M216 152C212 158 208 164 205 169"/>
+      <path d="M204 190C200 196 197 202 194 208"/>
+      <path d="M186 252C182 258 178 264 174 270"/>
+    </g>
+    <use href="#leaf" transform="translate(232 74) rotate(-34)"/>
+    <use href="#leafVein" transform="translate(232 74) rotate(-34)"/>
+    <use href="#leaf" transform="translate(206 120) rotate(18) scale(0.8)"/>
+    <use href="#leaf" transform="translate(190 250) rotate(-150) scale(0.7)"/>
+  </g>
+
+  <g class="blooms">
+    <g transform="translate(312 22) scale(0.82)"><g class="bloom"><use href="#cluster"/></g></g>
+    <g transform="translate(220 56) scale(0.68)"><g class="bloom"><use href="#cluster"/></g></g>
+    <g transform="translate(258 84) scale(0.72)"><g class="bloom"><use href="#sakuraHalf"/></g></g>
+    <g transform="translate(228 109) scale(0.58)"><g class="bloom"><use href="#sakuraHalf"/></g></g>
+    <g transform="translate(205 130) scale(0.6)"><g class="bloom"><use href="#cluster"/></g></g>
+    <g transform="translate(172 196) scale(0.5)"><g class="bloom"><use href="#cluster"/></g></g>
+    <g transform="translate(158 306) scale(0.42)"><g class="bloom"><use href="#cluster"/></g></g>
+    <g transform="translate(196 244) rotate(-18) scale(0.9)"><g class="bloom"><use href="#bud"/></g></g>
+    <g transform="translate(238 60) rotate(28) scale(0.85)"><g class="bloom"><use href="#bud"/></g></g>
+    <g transform="translate(216 118) rotate(-42) scale(0.7)"><g class="bloom"><use href="#bud"/></g></g>
+  </g>
+</svg>
+
+<svg class="scene scene--grass" viewBox="0 0 340 250" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bladeG" x1="0" y1="1" x2="0.2" y2="0">
+      <stop offset="0" stop-color="#405b46"/>
+      <stop offset="0.5" stop-color="#6f8a63"/>
+      <stop offset="0.85" stop-color="#a2b592"/>
+      <stop offset="1" stop-color="#c6d2bc" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="bladeG2" x1="0" y1="1" x2="0.4" y2="0">
+      <stop offset="0" stop-color="#50695a"/>
+      <stop offset="1" stop-color="#89a07b"/>
+    </linearGradient>
+    <linearGradient id="dryG" x1="0" y1="1" x2="0.3" y2="0">
+      <stop offset="0" stop-color="#9a8b6d"/>
+      <stop offset="1" stop-color="#cfc3a5"/>
+    </linearGradient>
+    <path id="bladeA" d="M0 0C-6-34-4-70 2-104 4-72 10-36 14 0Z"/>
+    <path id="bladeB" d="M0 0C2-30 8-58 18-84 10-56 8-28 12 0Z"/>
+    <path id="bladeC" d="M0 0C-10-26-18-52-30-74-14-52-4-26 6 0Z"/>
+    <path id="bladeDry" d="M0 0C-4-20-3-40 2-58 3-40 7-20 9 0Z"/>
+    <g id="daisy">
+      <circle cx="0" cy="-5.4" r="2.6" fill="#fffdf6"/>
+      <circle cx="5.1" cy="-1.6" r="2.6" fill="#fffdf6"/>
+      <circle cx="3.2" cy="4.4" r="2.6" fill="#fffdf6"/>
+      <circle cx="-3.2" cy="4.4" r="2.6" fill="#fffdf6"/>
+      <circle cx="-5.1" cy="-1.6" r="2.6" fill="#fffdf6"/>
+      <circle r="2.2" fill="#d6c08c"/>
+    </g>
+    <g id="forget">
+      <circle cx="0" cy="-4.6" r="2.2" fill="#dbe7ee"/>
+      <circle cx="4.2" cy="-1.4" r="2.2" fill="#dbe7ee"/>
+      <circle cx="2.6" cy="3.6" r="2.2" fill="#dbe7ee"/>
+      <circle cx="-2.6" cy="3.6" r="2.2" fill="#dbe7ee"/>
+      <circle cx="-4.2" cy="-1.4" r="2.2" fill="#dbe7ee"/>
+      <circle r="1.8" fill="#e6cd86"/>
+    </g>
+  </defs>
+
+  <ellipse cx="170" cy="250" rx="160" ry="12" fill="#6b7862" opacity="0.1"/>
+
+  <g class="tuft tuft--back" opacity="0.38">
+    <g transform="translate(18 250) rotate(-6) scale(0.62)"><g class="blade"><use href="#bladeA" fill="url(#bladeG2)"/></g></g>
+    <g transform="translate(62 250) rotate(4) scale(0.55)"><g class="blade"><use href="#bladeB" fill="url(#bladeG2)"/></g></g>
+    <g transform="translate(150 250) rotate(8) scale(0.5)"><g class="blade"><use href="#bladeC" fill="url(#bladeG2)"/></g></g>
+    <g transform="translate(206 250) rotate(-3) scale(0.58)"><g class="blade"><use href="#bladeA" fill="url(#bladeG2)"/></g></g>
+    <g transform="translate(286 250) rotate(-8) scale(0.52)"><g class="blade"><use href="#bladeB" fill="url(#bladeG2)"/></g></g>
+    <g transform="translate(328 250) rotate(6) scale(0.6)"><g class="blade"><use href="#bladeC" fill="url(#bladeG2)"/></g></g>
+  </g>
+
+  <g class="stems">
+    <path d="M49 250C47 214 47 184 49 154" fill="none" stroke="#7f9a7a" stroke-width="1.6"/>
+    <path d="M115 250C113 222 113 198 115 178" fill="none" stroke="#7f9a7a" stroke-width="1.5"/>
+    <path d="M192 250C193 222 193 200 192 180" fill="none" stroke="#7f9a7a" stroke-width="1.5"/>
+    <path d="M270 250C272 226 272 206 270 188" fill="none" stroke="#7f9a7a" stroke-width="1.4"/>
+  </g>
+
+  <g class="tuft">
+    <g transform="translate(40 250) rotate(-10)"><g class="blade"><use href="#bladeA" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(78 250) rotate(6) scale(0.95)"><g class="blade"><use href="#bladeB" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(112 250) rotate(-4) scale(0.72)"><g class="blade"><use href="#bladeA" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(148 250) rotate(12) scale(1.05)"><g class="blade"><use href="#bladeC" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(186 250) rotate(-6) scale(0.86)"><g class="blade"><use href="#bladeB" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(224 250) rotate(9)"><g class="blade"><use href="#bladeC" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(262 250) rotate(-3) scale(0.78)"><g class="blade"><use href="#bladeA" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(298 250) rotate(5) scale(0.92)"><g class="blade"><use href="#bladeB" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(320 250) rotate(-9) scale(0.6)"><g class="blade"><use href="#bladeA" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(96 250) rotate(-16) scale(0.95)"><g class="blade"><use href="#bladeDry" fill="url(#dryG)"/></g></g>
+    <g transform="translate(246 250) rotate(18) scale(0.85)"><g class="blade"><use href="#bladeDry" fill="url(#dryG)"/></g></g>
+  </g>
+
+  <g class="tuft tuft--front">
+    <g transform="translate(52 250) rotate(-14) scale(1.12)"><g class="blade"><use href="#bladeA" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(130 250) rotate(10)"><g class="blade"><use href="#bladeC" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(200 250) rotate(-8) scale(1.08)"><g class="blade"><use href="#bladeB" fill="url(#bladeG)"/></g></g>
+    <g transform="translate(280 250) rotate(13) scale(0.95)"><g class="blade"><use href="#bladeC" fill="url(#bladeG)"/></g></g>
+  </g>
+
+  <g class="flowers">
+    <g transform="translate(49 152)"><use href="#daisy"/></g>
+    <g transform="translate(115 176)"><use href="#daisy" transform="scale(0.85)"/></g>
+    <g transform="translate(192 178)"><use href="#daisy" transform="scale(0.8)"/></g>
+    <g transform="translate(270 186)"><use href="#daisy" transform="scale(0.75)"/></g>
+    <g transform="translate(28 192)"><use href="#forget" transform="scale(0.85)"/></g>
+    <g transform="translate(232 208)"><use href="#forget" transform="scale(0.72)"/></g>
+  </g>
+</svg>
+
+<svg class="scene scene--near" viewBox="0 0 260 260" aria-hidden="true" focusable="false">
+  <g fill="#6f8a58">
+    <path d="M8 252C10 210 30 176 62 156 40 186 26 218 24 252Z"/>
+    <path d="M46 258C56 222 82 196 118 186 88 208 68 234 62 258Z"/>
+  </g>
+  <g fill="#adbea5" opacity="0.85">
+    <path d="M20 256C26 226 44 202 70 190 50 212 38 236 34 258Z"/>
+  </g>
+  <g>
+    <path d="M258 12C222 30 196 58 184 92" fill="none" stroke="#554e45" stroke-width="6" stroke-linecap="round"/>
+    <path d="M258 12C222 30 196 58 184 92" fill="none" stroke="#a98a68" stroke-width="1.2" opacity="0.5"/>
+    <path d="M206 48C192 44 180 46 170 52" fill="none" stroke="#554e45" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<div class="sunlight" aria-hidden="true"></div>
+
+<div class="pond" aria-hidden="true">
+  <svg class="pond-water" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#e8f0ec" stop-opacity="0.18"/>
+        <stop offset="0.22" stop-color="#dcebe6" stop-opacity="0.32"/>
+        <stop offset="0.55" stop-color="#cfe3e1" stop-opacity="0.4"/>
+        <stop offset="1" stop-color="#bcd6d0" stop-opacity="0.46"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 8C120 -2 240 18 360 10 480 0 600 -4 720 6 840 16 960 18 1080 8 1200 -2 1320 4 1440 12L1440 240 0 240Z" fill="url(#waterG)"/>
+    <g class="water-reflection">
+      <ellipse class="reflection-sakura" cx="1130" cy="20" rx="118" ry="34"/>
+      <ellipse class="reflection-sakura" cx="1010" cy="14" rx="78" ry="24"/>
+      <ellipse class="reflection-willow" cx="300" cy="16" rx="88" ry="28"/>
+      <path class="reflection-willow" d="M170 16C166 -6 160 -24 150 -46 162 -26 174 -6 182 16Z" transform="translate(0 40) scale(1 -1)"/>
+      <path class="reflection-willow" d="M188 16C190 -6 196 -26 206 -48 198 -28 194 -8 196 16Z" transform="translate(0 42) scale(1 -1)"/>
+    </g>
+    <g fill="none" stroke="#7f9a8e" stroke-width="1">
+      <path d="M80 30C200 26 300 34 400 28" opacity="0.4"/>
+      <path d="M520 42C640 38 740 46 840 40" opacity="0.34"/>
+      <path d="M180 58C320 52 460 64 600 58" opacity="0.3"/>
+      <path d="M880 52C1000 48 1120 56 1240 50" opacity="0.32"/>
+      <path d="M360 74C500 68 620 80 760 74" opacity="0.24"/>
+      <path d="M1020 82C1140 78 1240 86 1340 80" opacity="0.24"/>
+    </g>
+    <g fill="none" stroke="#f6faf6" stroke-width="1.1">
+      <path d="M240 36C340 32 420 38 500 34" opacity="0.5"/>
+      <path d="M700 64C800 60 880 66 960 62" opacity="0.42"/>
+      <path d="M1100 30C1200 26 1280 32 1360 28" opacity="0.38"/>
+    </g>
+    <g class="water-grass">
+      <path d="M150 14C146 -8 140 -28 130 -52 142 -30 154 -8 162 14Z"/>
+      <path d="M162 14C164 -8 170 -30 180 -54 172 -30 168 -8 170 14Z"/>
+      <path d="M174 14C184 -6 196 -24 210 -34 196 -18 188 -2 186 14Z"/>
+      <path d="M1180 12C1176 -10 1170 -30 1160 -56 1172 -32 1184 -10 1192 12Z"/>
+      <path d="M1192 12C1194 -12 1200 -34 1210 -58 1202 -34 1198 -10 1200 12Z"/>
+      <path d="M1204 12C1214 -8 1226 -26 1240 -36 1226 -20 1218 -4 1216 12Z"/>
+    </g>
+    <g class="water-grass water-grass--near">
+      <path d="M420 96C418 74 414 60 406 40 418 60 428 78 434 96Z"/>
+      <path d="M448 96C452 76 460 64 472 54 460 68 456 82 458 96Z"/>
+      <path d="M980 96C978 72 974 56 966 38 978 58 988 78 992 96Z"/>
+    </g>
+  </svg>
+  <span class="ripple ripple--a"></span>
+  <span class="ripple ripple--b"></span>
+  <span class="ripple ripple--c"></span>
+  <span class="ripple ripple--d"></span>
+  <span class="ripple ripple--e"></span>
+  <span class="ripple ripple--f"></span>
+</div>
+
+<div class="mist" aria-hidden="true"></div>
+
+<div class="wind-layer" aria-hidden="true">
+  <span class="streak streak--a"></span>
+  <span class="streak streak--b"></span>
+</div>
+
+<div class="spring spring--back" aria-hidden="true"></div>
+<div class="spring spring--front" aria-hidden="true"></div>
+<div class="spring spring--catkin" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <div class="brand-text">
+      <h1>春风</h1>
+      <p>遇事不决，可问春风 · 五智能体协作推演</p>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <select class="mode-select" id="provider" title="运行模式">
+      <option value="">自动</option>
+      <option value="llm">真实模型</option>
+      <option value="mock">预置剧本</option>
+    </select>
+    <span class="pill" id="mode-pill">未开始</span>
+    <span class="pill pill--link" id="run-pill" hidden></span>
+    <button class="ghost ghost--skip" id="skip-btn" type="button" title="跳过动画，直接显示结果">立即</button>
+    <button class="ghost" id="history-btn" type="button">历史</button>
+    <button class="ghost ghost--danger" id="stop-btn" type="button" hidden>停止推演</button>
+    <button class="ghost" id="reset-btn" type="button">新推演</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="rail">
+    <section class="rail-block">
+      <h2>指挥席</h2>
+      <ul class="seats" id="seats">
+        <li data-seat="A1"><span class="lamp"></span><span class="seat-name">A1 背景探询</span><span class="seat-state">待命</span></li>
+        <li data-seat="A2"><span class="lamp"></span><span class="seat-name">A2 支持方</span><span class="seat-state">待命</span></li>
+        <li data-seat="A3"><span class="lamp"></span><span class="seat-name">A3 反对方</span><span class="seat-state">待命</span></li>
+        <li data-seat="A4"><span class="lamp"></span><span class="seat-name">A4 量化测算</span><span class="seat-state">待命</span></li>
+        <li data-seat="A5"><span class="lamp"></span><span class="seat-name">A5 仲裁汇总</span><span class="seat-state">待命</span></li>
+      </ul>
+    </section>
+
+    <section class="rail-block">
+      <h2>流转进度</h2>
+      <ol class="phases" id="phases">
+        <li><span class="tick"></span><em>入口</em></li>
+        <li><span class="tick"></span><em>探询</em></li>
+        <li><span class="tick"></span><em>并行</em></li>
+        <li><span class="tick"></span><em>看板</em></li>
+        <li><span class="tick"></span><em>交互</em></li>
+        <li><span class="tick"></span><em>收尾</em></li>
+      </ol>
+    </section>
+
+    <section class="rail-block rail-block--muted">
+      <h2>指令速记</h2>
+      <p><b>A</b> 质疑正方论据</p>
+      <p><b>B</b> 质疑反方风险</p>
+      <p><b>C</b> 修改财务参数</p>
+      <p><b>D</b> 补充新背景</p>
+      <p><b>E</b> 结束并出结论</p>
+      <p><b>F</b> 停止推演（不出报告）</p>
+      <p class="rail-note">说人话即可，路由是规则判定。</p>
+    </section>
+  </aside>
+
+  <main class="stage">
+    <div class="stream" id="stream" aria-live="polite"></div>
+
+    <form class="composer" id="composer" autocomplete="off">
+      <div class="composer-hint" id="composer-hint"></div>
+      <div class="composer-row">
+        <textarea id="input" rows="1" placeholder="先说清你在纠结什么…"></textarea>
+        <button class="send" id="send" type="submit">
+          <span>发送</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="quick" id="quick" hidden></div>
+    </form>
+  </main>
+</div>
+
+<div class="drawer" id="history" hidden>
+  <div class="drawer-head">
+    <h2>历史场次</h2>
+    <button class="ghost" id="history-close" type="button">关闭</button>
+  </div>
+  <div class="drawer-body" id="history-list"></div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

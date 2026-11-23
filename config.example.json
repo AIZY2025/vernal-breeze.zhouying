@@ -1,0 +1,42 @@
+{
+  "provider": "auto",
+  "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+  "api_key": "",
+  "api_key_env": "SANDBOX_API_KEY",
+  "model": "doubao-seed-1-6-250615",
+  "timeout": 90,
+  "max_tokens": 3000,
+  "temperature": {
+    "A1": 0.3,
+    "A2": 0.5,
+    "A3": 0.5,
+    "A4": 0.2,
+    "A5": 0.4
+  },
+  "quant": {
+    "emergency_months": 6,
+    "sensitivity_pct": 0.2,
+    "opportunity_low": 0.03,
+    "opportunity_high": 0.05
+  },
+  "search": {
+    "enabled": true,
+    "provider": "yuanbao",
+    "api_key": "",
+    "api_key_env": "TENCENTCLOUD_WSA_APIKEY",
+    "endpoint": "",
+    "timeout": 8,
+    "max_items": 5,
+    "per_site": 2,
+    "cache_hours": 24,
+    "refresh_hours": 6,
+    "fetch_pages": true,
+    "fetch_timeout": 6,
+    "fetch_chars": 1200,
+    "mode": "auto",
+    "secret_id": "",
+    "secret_key": "",
+    "secret_key_env": "TENCENTCLOUD_SECRET_KEY",
+    "region": ""
+  }
+}
